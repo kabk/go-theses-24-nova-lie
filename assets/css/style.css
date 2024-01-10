@@ -11,16 +11,24 @@
 */
 
 @font-face {
-    font-family: 'Your Font Name';
-    src: url('../fonts/yourfontname/yourfontname-roman.woff2');
-    font-weight: normal;
+    font-family: 'Softcore';
+    src: url('../fonts/Softcore-ExtraBold.woff');
+    font-weight: Extra Bold;
     font-style: normal;
     font-display: block;
 }
 
 @font-face {
-    font-family: 'Your Font Name';
-    src: url('../fonts/yourfontname/yourfontname-italic.woff2');
+  font-family: 'Softcore Black';
+  src: url('../fonts/Softcore-Black.woff;
+  font-weight: Extra Bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+    font-family: 'Softcore-Regular';
+    src: url('../fonts/Softcore-Regular.woff');
     font-weight: normal;
     font-style: italic;
     font-display: block;
@@ -81,7 +89,7 @@ a:hover {
 
 h1{
   /* h1 style */
-  background-color: rgb(244, 244, 244);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 106, 255);
   font-size: 100pt;
   overflow-x: hidden;
