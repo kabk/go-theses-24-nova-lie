@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-
 /* @FONT FACE (enable the use of 'custom fonts' inside your document) */
 
 /* 
@@ -11,47 +9,51 @@
 */
 
 @font-face {
-    font-family: 'Softcore';
-    src: url('../fonts/Softcore-ExtraBold.woff');
-    font-weight: Extra Bold;
-    font-style: normal;
-    font-display: block;
-}
-
-@font-face {
-  font-family: 'Softcore Black';
-  src: url('../fonts/Softcore-Black.woff;
+  font-family: "Softcore";
+  src: url("../fonts/Softcore-ExtraBold.woff");
   font-weight: Extra Bold;
   font-style: normal;
   font-display: block;
 }
 
 @font-face {
-    font-family: 'Softcore-Regular';
-    src: url('../fonts/Softcore-Regular.woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: block;
+  font-family: "SoftcoreBlack";
+  src: url("../fonts/Softcore-Black.woff");
+  font-weight: Extra Bold;
+  font-style: normal;
+  font-display: block;
 }
 
+@font-face {
+  font-family: "Softcore-Regular";
+  src: url("../fonts/Softcore-Regular.woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
 
+@font-face {
+  font-family: "Softcore-Thin";
+  src: url("../fonts/Softcore-Thin.woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
 
 /* VARIABLES */
 
 :root {
   /* Color values */
   --color-background: rgb(255, 255, 255);
-  --color-text: rgb(109, 18, 18)
-  --color-text-link: rgba(0,0,255,0.8);
-  --color-text-link-hover: rgba(0,0,255,0.4);
+  --color-text: rgb(109, 18, 18);
+  --color-text-link: rgba(0, 0, 255, 0.8);
+  --color-text-link-hover: rgba(0, 0, 255, 0.4);
   /* Font values */
-  --font-family: 'Your Font Name', 'Helvetica', 'Arial', sans-serif;
+  --font-family: "Your Font Name", "Helvetica", "Arial", sans-serif;
   --font-size: 24px;
   /* Margin value */
   --margin: 1rem;
 }
-
-
 
 /* GENERAL STYLES */
 
@@ -62,13 +64,13 @@ html {
 }
 
 body {
-  position:relative;
+  position: relative;
   background-color: var(--color-background);
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
   /* width:100%; */
-  height:auto;
-  overflow-y:auto;
+  height: auto;
+  overflow-y: auto;
   margin: 70%, 5vh;
 }
 
@@ -86,8 +88,7 @@ a:hover {
   background-color: rgb(232, 235, 245);
 }
 
-
-h1{
+h1 {
   /* h1 style */
   background-color: rgb(255, 255, 255);
   color: rgb(0, 106, 255);
@@ -95,38 +96,38 @@ h1{
   overflow-x: hidden;
 }
 
-h2{
-  background-color: rgb(207, 233, 255)
+h2 {
+  background-color: rgb(207, 233, 255);
   font-size: 60pt;
 }
 
-h3{
+h3 {
   /* h3 style */
 }
 
-h4, h5, h6{
+h4,
+h5,
+h6 {
   /* h4-h5-h6 style */
 }
 
-p{
- background-color: aliceblue;
- font-size: 16pt;
+p {
+  background-color: aliceblue;
+  font-size: 16pt;
 }
 
-ol, ul{
+ol,
+ul {
   /* ordered list and unordered list styles */
-  
 }
 
-blockquote{
+blockquote {
   /* blockquote element style */
 }
 
-hr{
+hr {
   /* horizontal rule style */
 }
-
-
 
 /* PAGE STYLES */
 
@@ -138,25 +139,17 @@ div.page-wrapper {
 }
 
 /* navigation */
- 
-nav{
-  
+
+nav {
 }
 
 /* content */
 
-main{
- 
+main {
 }
 
-summary{
-  
+summary {
 }
-
-
-
-
-
 
 /* UTILITY CLASSES */
 
@@ -170,61 +163,39 @@ summary{
   display: none;
 }
 
-
-
-
-
 /* WEBSITE MEDIA QUERIES */
 
 /* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
 /* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
 
 @media (max-width: 779px) {
-
   /* your 'mobile' overriding css properties here */
-
-
 
   /* utility classes, mobile */
 
-  .desktop-only{
-    display:none;
+  .desktop-only {
+    display: none;
   }
 
-  .mobile-only{
-    display:block;
+  .mobile-only {
+    display: block;
   }
-
 }
-
-
 
 /* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
 
 @media (max-width: 339px) {
-
   /* your overriding css properties here */
-
 }
-
-
 
 /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
 
 @media (max-width: 779px) and (orientation: landscape) {
-
-   /* your overriding css properties here */
-
+  /* your overriding css properties here */
 }
-
-
 
 /* use this query to apply style for 'small' desktop screens */
 
 @media (min-width: 780px) and (max-width: 992px) {
-
   /* your overriding css properties here */
-
 }
-
-

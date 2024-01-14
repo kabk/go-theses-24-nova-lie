@@ -6,6 +6,38 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: "Softcore";
+  src: url("../fonts/Softcore-ExtraBold.woff");
+  font-weight: Extra Bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "SoftcoreBlack";
+  src: url("../fonts/Softcore-Black.woff");
+  font-weight: Extra Bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Softcore-Regular";
+  src: url("../fonts/Softcore-Regular.woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Softcore-Thin";
+  src: url("../fonts/Softcore-Thin.woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
 body {
   font-family: sans-serif;
   font-size: 14px;
@@ -59,6 +91,7 @@ main {
   padding: 3vw;
   border: 1rem;
   border-radius: 2rem;
+  overflow: visible;
 }
 
 h1 {
@@ -90,18 +123,30 @@ h3 {
 
 h4 {
   line-height: 1.4rem;
+  font-size: 5rem;
+}
+
+highlighted {
+  color: red;
 }
 
 blockquote {
   font-weight: bold;
-  padding: 1rem 9rem;
-  line-height: 1.8rem;
+  padding: 1rem 9vw;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
   font-family: "Softcore-Regular";
   text-align: justify;
+  color: rgb(166, 161, 93);
 }
 
 .narrow-image {
-  margin-left: 4rem;
+  margin-left: 0rem;
+  width: 80vw;
+  width: 20rem;
+}
+
+.wide-image {
 }
 
 .narrow-image > figcaption {
@@ -109,15 +154,17 @@ blockquote {
 }
 
 /* .narrow-image > figcaption.hover {
-  opacity: 100%;
+  opacity: 10%;
 } */
 
 article > section > p {
   text-indent: 0rem;
-  line-height: 1.5rem;
+  line-height: 1.9rem;
+  font-size: 1.4rem;
   padding: 1rem;
   text-align: justify;
   font-family: "Softcore-Regular";
+  overflow: visible;
 }
 
 footnotes-list {
@@ -130,7 +177,43 @@ footnotes-list {
 sup {
   font-size: 1rem;
   font-family: "Softcore-Black";
-  background-color: rgb(255, 206, 242);
+  /* background-color: rgb(255, 206, 242); */
   color: white;
   padding: 0.1rem;
+}
+
+ul {
+  /* position: fixed; */
+  display: contents;
+  font-size: 1rem;
+  color: white;
+  width: 1rem;
+  height: 5rem;
+  line-height: 2.3rem;
+  text-decoration: none;
+  text-align: left;
+}
+
+nav {
+  width: max-content;
+  background-color: rgb(255, 255, 255);
+  /* display: block; */
+  padding: 2rem;
+  border-radius: 2rem;
+  /* position: fixed; */
+  bottom: 6rem;
+  left: 1rem;
+  font-family: "Softcore-Thin";
+  text-decoration: none;
+
+  /* margin-bottom: 2rem; */
+}
+
+#intro {
+  padding-top: 2%;
+}
+
+#chapter-1 {
+  padding-top: 2rem;
+  color: rgb(0, 0, 0);
 }
