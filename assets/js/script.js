@@ -1,21 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () {
-    scrollFunction();
-  };
-
-  function scrollFunction() {
-    var mybutton = document.getElementById("mybutton");
-
+  window.addEventListener("scroll", function () {
+    var button = document.getElementById("myBtn");
     if (
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
     ) {
-      mybutton.style.display = "block";
+      button.style.display = "block";
     } else {
-      mybutton.style.display = "none";
+      button.style.display = "none";
     }
-  }
+  });
 
   // When the user clicks on the button, scroll to the top of the document
   function topFunction() {
@@ -24,9 +19,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Attach click event listener to the button
-  var mybutton = document.getElementById("mybutton");
-  mybutton.addEventListener("click", topFunction);
+  const button = document.getElementById("myBtn");
+  button.addEventListener("click", topFunction);
 
-  const links = document.querySelectorAll(".visual-event-link");
-  const images = document.querySelectorAll(".visual-event-link");
+  // Smooth scroll to target element
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      var targetId = this.getAttribute("href").substr(1);
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        var windowHeight = window.innerHeight;
+        var elementOffsetTop = targetElement.offsetTop;
+        var scrollPosition =
+          elementOffsetTop - windowHeight / 2 + targetElement.offsetHeight / 2;
+
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });
