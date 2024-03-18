@@ -55,6 +55,7 @@
 }
 
 @media screen and (max-width: 1335px) {
+  figure.wide-image {
     width: 100%;
   }
 }
