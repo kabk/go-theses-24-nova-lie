@@ -59,6 +59,10 @@
     width: 100%;
     padding: 0;
   }
+
+  .rain {
+    display: none;
+  }
 }
 
 @media (max-width: 800px) {
@@ -514,10 +518,17 @@ main {
   background-color: rgb(255, 255, 255);
   /* border: 1rem; */
   padding: 1rem 1rem 1rem 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 50vh;
   border-radius: 1rem;
   overflow: visible;
   display: block;
+}
+
+.rain {
+  width: 100vw;
+  height: auto;
+  z-index: 999;
+  position: sticky;
 }
 
 h1 {
