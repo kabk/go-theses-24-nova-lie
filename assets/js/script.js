@@ -33,11 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (targetElement) {
         var windowHeight = window.innerHeight;
         var elementOffsetTop = targetElement.offsetTop;
-        var scrollPosition =
-          elementOffsetTop - windowHeight / 2 + targetElement.offsetHeight / 2;
 
         window.scrollTo({
-          top: scrollPosition,
+          top:
+            elementOffsetTop -
+            windowHeight / 2 +
+            targetElement.offsetHeight / 2,
           behavior: "smooth",
         });
       }

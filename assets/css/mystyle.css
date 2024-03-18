@@ -54,6 +54,45 @@
   font-display: block;
 }
 
+@media screen and (max-width: 1335px) {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  nav span {
+    display: none;
+  }
+
+  figure {
+    width: 100%;
+  }
+
+  body {
+    max-width: 100vw;
+    min-width: 40ch;
+  }
+
+  header li p {
+    display: none;
+  }
+
+  header {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* .page-wrapper {
+    width: 100%;
+  } */
+}
+
+@media (max-width: 768px) {
+  nav img {
+    height: 3rem;
+  }
+}
+
 em {
   font-family: "Softcore-Italic";
   font-style: italic;
@@ -135,10 +174,14 @@ figcaption {
   color: black;
   width: 100vw;
   z-index: 999;
-  height: 3rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.notice {
+  left: 0;
+  position: relative;
 }
 
 .page-wrapper {
@@ -164,7 +207,7 @@ figcaption {
     max-width: 100vw;
     position: relative;
     z-index: 100;
-    pointer-events: none;
+    pointer-events: all;
 
     & > nav {
       pointer-events: all;
@@ -238,6 +281,7 @@ nav {
   align-self: center;
   padding-left: 10vw;
   padding-right: 10vw;
+  cursor: pointer;
 }
 
 nav span {
@@ -380,7 +424,16 @@ nav img {
   object-fit: contain;
   object-position: top;
   position: relative;
-  /* color: aliceblue; */
+  mix-blend-mode: exclusion;
+}
+
+.nav-button-container img {
+  mix-blend-mode: normal;
+  transition: mix-blend-mode 0.3s ease; /* Smooth transition */
+}
+
+.nav-button-container:hover a img {
+  mix-blend-mode: difference; /* Change blending mode on hover */
 }
 
 .headertitle {
@@ -561,7 +614,7 @@ footer {
 
 .footer img {
   left: 0rem;
-  bottom: 0.5rem;
+  /* bottom: 0.5rem; */
   width: 4rem;
   height: 4rem;
   z-index: 300;
@@ -578,6 +631,8 @@ footer {
   align-self: center;
   padding-left: 2rem;
   font-size: 1rem;
+  text-align: center;
+  width: calc(100% - 8rem);
 }
 
 .bibliography {
@@ -617,50 +672,4 @@ sup {
 .bibliography article section p {
   text-indent: 1em; /* Adjust the indentation as needed */
   margin-bottom: 0.5em; /* Add some bottom margin for spacing between paragraphs */
-}
-@media screen and (max-width: 1335px) {
-  .wide-image {
-    width: 100%;
-  }
-}
-
-@media (max-width: 800px) {
-  nav span {
-    display: none;
-  }
-
-  figure {
-    width: 100%;
-  }
-
-  main {
-    min-width: 100ch;
-  }
-
-  body {
-    max-width: 100vw;
-    min-width: 40ch;
-  }
-
-  header li p {
-    display: none;
-  }
-
-  header {
-    height: 100vh;
-    width: 100vw;
-  }
-
-  /* .page-wrapper {
-    width: 100%;
-  } */
-}
-
-@media (max-width: 768px) {
-  nav img {
-    height: 3rem;
-    object-fit: contain;
-    object-position: top;
-    position: relative;
-  }
 }
