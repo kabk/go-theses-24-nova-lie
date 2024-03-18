@@ -57,6 +57,7 @@
 @media screen and (max-width: 1335px) {
   figure.wide-image {
     width: 100%;
+    padding: 0;
   }
 }
 
@@ -580,6 +581,11 @@ article > section > p {
   max-width: 100%;
 }
 
+article > section.section-bibliography p {
+  text-indent: -3rem;
+  padding-left: 3rem;
+}
+
 .footnotes {
   font-family: "Softcore-Black";
   color: black;
@@ -636,22 +642,6 @@ footer {
   width: calc(100% - 8rem);
 }
 
-.bibliography {
-  font-family: "Softcore-Regular";
-  font-size: 1.4rem;
-  line-height: 1.9rem;
-  padding-top: 3rem;
-  align-items: center;
-}
-
-#bibliography article section p {
-  text-indent: 2rem;
-}
-
-/* .bibliography > p:first {
-  text-indent;
-} */
-
 sup {
   font-size: 1rem;
   font-family: "Softcore-Black";
@@ -668,9 +658,4 @@ sup {
   mask-size: 100% 100%;
   mask-position: center;
   mask-mode: luminance;
-}
-
-.bibliography article section p {
-  text-indent: 1em; /* Adjust the indentation as needed */
-  margin-bottom: 0.5em; /* Add some bottom margin for spacing between paragraphs */
 }
