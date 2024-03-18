@@ -91,7 +91,12 @@
 
 @media (max-width: 768px) {
   nav img {
-    height: 3rem;
+    height: 4rem;
+  }
+
+  .container img {
+    height: 40vw;
+    width: auto;
   }
 }
 
@@ -108,7 +113,7 @@ body {
   font-family: sans-serif;
   font-size: 14px;
   scroll-behavior: smooth;
-  background-image: url(../../content/camofaluge.png);
+  background-image: url(../../content/camofalugethefirst.png);
 
   /* background-position: fixed;
   background-image: fixed; */
@@ -136,6 +141,7 @@ figcaption p {
   padding-bottom: 1rem;
   z-index: 99;
   text-indent: 2rem;
+  text-align: left;
 }
 
 figcaption {
@@ -146,34 +152,52 @@ figcaption {
 
 .topper {
   width: 100vw;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   top: 0;
   position: fixed;
   align-self: center;
   line-height: 1.4rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
   font-family: "Softcore Bold";
-  background-color: white;
   color: black;
   width: 100vw;
-  z-index: 3;
+  z-index: 999;
   height: 3rem;
   justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.topper p {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding-left: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  width: calc(100% - 8rem);
+}
+/* 
+.logo {
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+} */
+
 .footer {
   width: 100vw;
   bottom: 0;
   position: fixed;
   line-height: 1.4rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
   font-family: "Softcore Bold";
   background-color: white;
-  color: black;
+  color: white;
   width: 100vw;
   z-index: 999;
   display: flex;
@@ -181,9 +205,24 @@ figcaption {
   justify-content: center; */
 }
 
-.notice {
+/* .notice {
   left: 0;
   position: relative;
+  height: 4rem;
+} */
+
+.container img {
+  height: 25vw;
+  width: auto;
+}
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: flex-end;
 }
 
 .page-wrapper {
@@ -218,10 +257,11 @@ figcaption {
     & > header,
     footer {
       position: fixed;
-      transform: translateX(-50%);
+      /* transform: translateX(-50%); */
       left: 50vw;
       height: 4rem;
       z-index: 999;
+      background-color: white;
 
       & > div {
         /* style it here */
@@ -300,6 +340,7 @@ nav span {
 .nav-button-container:hover span {
   display: block;
   background-color: white;
+  max-width: 15ch;
 }
 
 /* .nav-button-container a {
@@ -426,7 +467,6 @@ nav img {
   object-fit: contain;
   object-position: top;
   position: relative;
-  mix-blend-mode: exclusion;
 }
 
 .nav-button-container img {
@@ -434,14 +474,14 @@ nav img {
   transition: mix-blend-mode 0.3s ease; /* Smooth transition */
 }
 
-.nav-button-container:hover a img {
-  mix-blend-mode: difference; /* Change blending mode on hover */
+.nav-button-container:hover img {
+  mix-blend-mode: saturation; /* Change blending mode on hover */
 }
 
 .headertitle {
   height: 100vh;
   width: 100vw;
-  transform: translateY(-50%);
+  transform: translateY(-20%);
   z-index: 999;
 }
 
@@ -615,32 +655,20 @@ footer {
   background-color: white;
   width: 100vw;
   z-index: 999;
+  height: 3rem;
   /* position: fixed; */
   -ms-flex-item-align: center;
   justify-content: space-between;
 }
 
-.footer img {
-  left: 0rem;
-  /* bottom: 0.5rem; */
-  width: 3rem;
-  height: 3rem;
-  z-index: 300;
-  background-color: #000000;
-}
-
-/* href {
-  scroll-padding-top: 50vh;
-} */
-
 .footer p {
   display: flex;
   justify-content: center;
   align-self: center;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
   font-size: 1rem;
   text-align: center;
-  width: calc(100% - 8rem);
+  width: 100%;
 }
 
 sup {
@@ -660,3 +688,7 @@ sup {
   mask-position: center;
   mask-mode: luminance;
 }
+/* 
+article visual-event-link {
+  cursor: help;
+} */
