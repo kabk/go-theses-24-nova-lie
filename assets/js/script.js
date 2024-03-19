@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             windowHeight / 2 +
             targetElement.offsetHeight / 2 +
             0,
-          behavior: "smooth",
+          behavior: "instant",
         });
       }
     });
